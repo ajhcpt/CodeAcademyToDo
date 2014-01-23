@@ -3,35 +3,50 @@ package ag.codeacademy.todo.CodeAcademyToDo;
 import java.util.Date;
 
 public class Task {
-	private String Description;
-	private String Detail;
-	private Date StartDate;
-	private Date EndDateTime;
-	private Category Category;
+	private String description;
+	private String detail;
+	private Date startDate;
+	private Date endDateTime;
+	private Category taskCategory;
+	private Boolean isCompleted;
+	
 	
 	public String getDescription() {
-		return Description;
+		return description;
 	}
 	public void setDescription(String description) {
-		Description = description;
+		this.description = description;
 	}
 	public String getDetail() {
-		return Detail;
+		return detail;
 	}
 	public void setDetail(String detail) {
-		Detail = detail;
+		this.detail = detail;
 	}
 	public Date getStartDate() {
-		return StartDate;
+		return startDate;
 	}
 	public void setStartDate(Date startDate) {
-		StartDate = startDate;
+		this.startDate = startDate;
 	}
 	public Date getEndDateTime() {
-		return EndDateTime;
+		return endDateTime;
 	}
 	public void setEndDateTime(Date endDateTime) {
-		EndDateTime = endDateTime;
+		this.endDateTime = endDateTime;
 	}
+	public Category getTaskCategory() {
+		return taskCategory;
+	}
+	public void setTaskCategory(Category taskCategory) {
+		this.taskCategory = taskCategory;
+	}
+	public Boolean getIsCompleted() {
+		return isCompleted;
+	}
+	public void setIsCompleted(Boolean isCompleted) {
+		this.isCompleted = isCompleted;
+	}
+
 	
 }

@@ -1,21 +1,30 @@
 package ag.codeacademy.todo.CodeAcademyToDo;
 
 public class Category {
-	private int ID;
-	private int CategoryName;
+	private int iD;
+	private String categoryName;
 	
-	public int getID() {
-		return ID;
+	public Category(String Name) {
+		categoryName = Name;
 	}
-	public void setID(int iD) {
-		ID = iD;
+
+	public int getiD() {
+		return iD;
 	}
-	public int getCategoryName() {
-		return CategoryName;
+
+	public void setiD(int iD) {
+		this.iD = iD;
 	}
-	public void setCategoryName(int categoryName) {
-		CategoryName = categoryName;
+
+	public String getCategoryName() {
+		return categoryName;
 	}
+
+	public void setCategoryName(String categoryName) {
+		this.categoryName = categoryName;
+	}
+	
+	
 	
 	
 }
