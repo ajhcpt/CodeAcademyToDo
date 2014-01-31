@@ -1,6 +1,7 @@
 package ag.codeacademy.todo.CodeAcademyToDo;
 
 import java.util.Date;
+import java.util.concurrent.atomic.AtomicInteger;
 
 public class Task {
 	private String description;
@@ -9,44 +10,31 @@ public class Task {
 	private Date endDateTime;
 	private Category taskCategory;
 	private Boolean isCompleted;
+	private int id;
 	
+	private static AtomicInteger nextId = new AtomicInteger(0);	
 	
+	public Task(String description, String detail, Date startDate,
+			Date endDateTime, Category taskCategory, boolean isCompleted) {
+		this.description = description;
+		this.detail = detail;
+		this.startDate = startDate;
+		this.endDateTime = endDateTime;
+		this.taskCategory = taskCategory;
+		this.isCompleted = isCompleted;
+		this.id = nextId.incrementAndGet();
+	}
+
+	public void SetIsCompletedToFalse() {
+		isCompleted = false;
+	}
+	
+	public void SetIsCompletedToTrue() {
+		isCompleted = true;
+	}
+
 	public String getDescription() {
 		return description;
 	}
-	public void setDescription(String description) {
-		this.description = description;
-	}
-	public String getDetail() {
-		return detail;
-	}
-	public void setDetail(String detail) {
-		this.detail = detail;
-	}
-	public Date getStartDate() {
-		return startDate;
-	}
-	public void setStartDate(Date startDate) {
-		this.startDate = startDate;
-	}
-	public Date getEndDateTime() {
-		return endDateTime;
-	}
-	public void setEndDateTime(Date endDateTime) {
-		this.endDateTime = endDateTime;
-	}
-	public Category getTaskCategory() {
-		return taskCategory;
-	}
-	public void setTaskCategory(Category taskCategory) {
-		this.taskCategory = taskCategory;
-	}
-	public Boolean getIsCompleted() {
-		return isCompleted;
-	}
-	public void setIsCompleted(Boolean isCompleted) {
-		this.isCompleted = isCompleted;
-	}
 
-	
 }
