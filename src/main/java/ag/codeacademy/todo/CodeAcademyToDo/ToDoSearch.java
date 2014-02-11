@@ -7,4 +7,14 @@ public class ToDoSearch {
 		return toDoList;
 		
 	}
+	
+	public ArrayList<ToDo> FindByImportance(String importance, ArrayList<ToDo> toDoList) {
+		return toDoList;
+		
+	}
+	
+	public ArrayList<ToDo> FindByCategory(String category, ArrayList<ToDo> toDoList) {
+		return toDoList;
+		
+	}
 }
