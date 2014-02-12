@@ -5,7 +5,6 @@ import static org.junit.Assert.*;
 import java.util.ArrayList;
 import java.util.List;
 
-import org.mockito.*;
 import org.junit.*;
 
 public class ToDoBoardTest {
@@ -15,18 +14,15 @@ public class ToDoBoardTest {
 
 	@Before 
 	public void setUp() {
-		List toDoList = new ArrayList<ToDo>();
-		toDo1 = new ToDo("description1", "detail1", "01/02/2014",
-				"02/02/2014", "Budget", "High");
+		List<ToDo> toDoList = new ArrayList<ToDo>();
+		toDo1 = new ToDo("description1", "detail1", "01/02/2014", "02/02/2014", "Budget", "High");
+		toDo2 = new ToDo("description2", "detail1", "01/02/2014", "02/02/2014", "Budget", "High");
+		toDo3 = new ToDo("description3", "detail1", "01/02/2014", "02/02/2014", "Budget", "High");
+		toDo4 = new ToDo("description4", "detail1", "01/02/2014", "02/02/2014", "Budget", "High");
+		
 		toDoList.add(toDo1);
-		toDo2 = new ToDo("description2", "detail1", "01/02/2014",
-				"02/02/2014", "Budget", "High");
 		toDoList.add(toDo2);
-		toDo3 = new ToDo("description3", "detail1", "01/02/2014",
-				"02/02/2014", "Budget", "High");
 		toDoList.add(toDo3);
-		toDo4 = new ToDo("description4", "detail1", "01/02/2014",
-				"02/02/2014", "Budget", "High");
 		toDoList.add(toDo4);
 		
 		toDoBoard = new ToDoBoard(toDoList);
@@ -52,7 +48,7 @@ public class ToDoBoardTest {
 	
 	@Test
 	public void testAddMultipleToDos() {
-		List toDoList = new ArrayList<ToDo>();
+		List<ToDo> toDoList = new ArrayList<ToDo>();
 		ToDo toDo5 = new ToDo("description1", "detail1", "01/02/2014",
 				"02/02/2014", "Budget", "High");
 		toDoList.add(toDo5);

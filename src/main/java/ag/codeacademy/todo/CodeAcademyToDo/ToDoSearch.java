@@ -1,19 +1,19 @@
 package ag.codeacademy.todo.CodeAcademyToDo;
 
-import java.util.ArrayList;
+import java.util.List;
 
 public class ToDoSearch {
-	public ArrayList<ToDo> FindByDescription(String description, ArrayList<ToDo> toDoList) {
+	public List<ToDo> FindByDescription(String description, List<ToDo> toDoList) {
 		return toDoList;
 		
 	}
 	
-	public ArrayList<ToDo> FindByImportance(String importance, ArrayList<ToDo> toDoList) {
+	public List<ToDo> FindByImportance(String importance, List<ToDo> toDoList) {
 		return toDoList;
 		
 	}
 	
-	public ArrayList<ToDo> FindByCategory(String category, ArrayList<ToDo> toDoList) {
+	public List<ToDo> FindByCategory(String category, List<ToDo> toDoList) {
 		return toDoList;
 		
 	}
