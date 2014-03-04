@@ -41,7 +41,7 @@ public class ToDoBoardTest {
 
 	@Test
 	public void testRemoveToDo() {
-		toDoBoard.RemoveToDo(toDo2);
+		toDoBoard.RemoveSingleToDo(toDo2);
 		assertEquals(false, toDoBoard.gettoDoList().contains(toDo2));
 		assertEquals(3, toDoBoard.gettoDoList().size());
 	}

@@ -11,8 +11,7 @@ public class ToDoSearch {
 				searchResult.add(toDo);
 			}
 		}
-		return searchResult;
-		
+		return searchResult;	
 	}
 	
 	private static List<ToDo> FindByImportance(String importance, List<ToDo> toDoList) {
@@ -22,8 +21,7 @@ public class ToDoSearch {
 				searchResult.add(toDo);
 			}
 		}
-		return searchResult;
-		
+		return searchResult;	
 	}
 	
 	private static List<ToDo> FindByCategory(String category, List<ToDo> toDoList) {
