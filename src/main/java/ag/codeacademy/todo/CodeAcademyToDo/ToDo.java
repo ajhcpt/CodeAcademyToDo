@@ -31,4 +31,13 @@ public class ToDo {
 		return description;
 	}
 
+	public String getImportance() {
+		return importance;
+	}
+
+	public String getTaskCategory() {
+		return taskCategory;
+	}
+
+
 }

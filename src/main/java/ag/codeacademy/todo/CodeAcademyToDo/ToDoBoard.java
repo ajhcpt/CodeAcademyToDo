@@ -17,8 +17,14 @@ public class ToDoBoard {
 		ToDoBoard.toDoList.addAll(toDoList);
 	}
 	
-	public void RemoveToDo(ToDo toDo) {
+	public void RemoveSingleToDo(ToDo toDo) {
 		toDoList.remove(toDo);
+	}
+	
+	public void RemoveMultipleToDos(List<ToDo> toDosToBeRemoved) {
+		for(ToDo toDo: toDosToBeRemoved) {
+			toDoList.remove(toDo);
+		}
 	}
 	
 	public List<ToDo> gettoDoList() {

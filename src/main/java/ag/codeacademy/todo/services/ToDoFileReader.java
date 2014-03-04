@@ -18,33 +18,10 @@ public class ToDoFileReader implements IToDoReader {
 	}
 	
 	@Override
-	public void Read() {
+	public List<ToDo> Read() {
 		List<ToDo> toDoList = new ArrayList<ToDo>();
 		
-		int numberOfToDos = Integer.parseInt(reader.readLine());
-		for (int i = 0; i < numberOfToDos; i++) {
-			String description = reader.readLine();
-			String detail = reader.readLine();
-			String startDate = reader.readLine();
-			String endDate = reader.readLine();
-			String category = reader.readLine();
-			String importance = reader.readLine();
-			
-			ToDo toDo = new ToDo(description, detail, startDate, endDate, category, importance);
-			toDoList.add(toDo);
-		}
-		return toDoList;
-		
-		
-	}
-	
-	
-	
-	/*
-	public static List<ToDo> ReadFromFile(String fileName) {
-		List<ToDo> toDoList = new ArrayList<ToDo>();
-		
-		try (BufferedReader reader = new BufferedReader(new FileReader(fileName))) {
+		try {
 			int numberOfToDos = Integer.parseInt(reader.readLine());
 			for (int i = 0; i < numberOfToDos; i++) {
 				String description = reader.readLine();
@@ -57,15 +34,13 @@ public class ToDoFileReader implements IToDoReader {
 				ToDo toDo = new ToDo(description, detail, startDate, endDate, category, importance);
 				toDoList.add(toDo);
 			}
-			return toDoList;
-		} catch (FileNotFoundException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-			return null;
+			return toDoList;	
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
+			System.out.println(e.getMessage());
 			return null;
-		}
-	}*/
+		}		
+		
+	}
+	
+	
 }
