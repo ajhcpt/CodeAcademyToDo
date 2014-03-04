@@ -31,7 +31,8 @@ public class App {
 		System.out.println("1. Add To Do");
 		System.out.println("2. Delete To Do");
 		System.out.println("3. Search To Dos");
-		System.out.println("4. Exit");
+		System.out.println("4. Save To Dos");
+		System.out.println("5. Exit");
 	}
 	
 	private void AddScreen() {
